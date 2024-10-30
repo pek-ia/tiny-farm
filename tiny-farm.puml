@@ -1,0 +1,40 @@
+@startuml
+class Tiger {
+}
+class WildAnimal {
++ void eat()
+}
+
+abstract class Animal {
++ {abstract}void eat()
+}
+
+abstract class FarmAnimal {
+- String name
++ String getName()
+}
+
+
+class Farm {
+~ List<Animal> animals
++ void add(Animal)
++ void feedAnimals()
+}
+
+
+class Cat {
++ void eat()
+}
+
+class Dog {
++ void eat()
+}
+
+
+
+WildAnimal <|-- Tiger
+Animal <|-- WildAnimal
+Animal <|-- FarmAnimal
+FarmAnimal <|-- Cat
+FarmAnimal <|-- Dog
+@enduml

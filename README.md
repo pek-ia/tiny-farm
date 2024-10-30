@@ -1,0 +1,1 @@
+![Image](./tiny-farm-class-diagram.png)
