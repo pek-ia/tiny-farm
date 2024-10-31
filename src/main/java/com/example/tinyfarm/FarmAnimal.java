@@ -1,3 +1,5 @@
+package com.example.tinyfarm;
+
 abstract public class FarmAnimal extends Animal {
 
     public FarmAnimal(String name){

@@ -1,3 +1,5 @@
+package com.example.tinyfarm;
+
 public class Cat extends FarmAnimal {
 
     public Cat(String name) {

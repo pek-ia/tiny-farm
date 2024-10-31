@@ -1,3 +1,5 @@
+package com.example.tinyfarm;
+
 abstract public class WildAnimal extends Animal {
 
     @Override
