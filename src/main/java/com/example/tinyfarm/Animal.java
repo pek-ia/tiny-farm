@@ -1,5 +1,10 @@
 package com.example.tinyfarm;
 
-public abstract class Animal {
-    abstract public void eat();
+public interface Animal {
+
+    void eat();
+
+    default int getWeight() {
+        return 100;
+    }
 }

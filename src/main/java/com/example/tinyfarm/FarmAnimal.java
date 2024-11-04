@@ -1,6 +1,11 @@
 package com.example.tinyfarm;
 
-abstract public class FarmAnimal extends Animal {
+import com.example.tinyfarm.fileio.FileSavable;
+
+abstract public class FarmAnimal implements Animal, Comparable<FarmAnimal>, FileSavable {
+
+    private final String name;
+    protected int weight;
 
     public FarmAnimal(String name){
         this.name = name;
@@ -10,5 +15,19 @@ abstract public class FarmAnimal extends Animal {
         return name;
     }
 
-    private String name;
+
+    @Override
+    public int compareTo(FarmAnimal o) {
+       return this.getName().compareTo(o.getName());
+    }
+
+    @Override
+    public int getWeight() {
+        return weight;
+    }
+
+
+    public String asFileString() {
+        return getName() + "|" + getWeight();
+    }
 }

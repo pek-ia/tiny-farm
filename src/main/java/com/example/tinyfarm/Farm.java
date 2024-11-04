@@ -1,5 +1,7 @@
 package com.example.tinyfarm;
 
+import com.example.tinyfarm.fileio.FarmFileManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +16,14 @@ public class Farm {
     public void feedAnimals(){
         for (Animal a : animals){
             a.eat();
+            System.out.println(a.getWeight());
+
         }
     }
 
+    public void saveAnimalsToFile() {
+        FarmFileManager ffm = new FarmFileManager();
+        ffm.saveAnimalsToFile(animals);
+    }
 }
 

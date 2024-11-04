@@ -9,6 +9,7 @@ public class Dog extends FarmAnimal {
     @Override
     public void eat() {
         System.out.println("I'm " + getName() + "!!  Slurp, Chomp. Sluuurp. !!! ");
+        weight ++;
     }
 
 

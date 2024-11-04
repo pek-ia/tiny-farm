@@ -8,6 +8,7 @@ public class Cat extends FarmAnimal {
 
     @Override
     public void eat() {
-        System.out.println("NOYB: Nibble.  Nibble.  Yum.");
+        System.out.println(getName() + ": Nibble.  Nibble.  Yum.");
+        weight += 2;
     }
 }

@@ -1,0 +1,50 @@
+@startuml
+class com.example.tinyfarm.Tiger {
+}
+abstract class com.example.tinyfarm.FarmAnimal {
+- String name
++ String getName()
+}
+
+
+class com.example.tinyfarm.Dog {
++ void eat()
+}
+
+class com.example.tinyfarm.Cat {
++ void eat()
+}
+
+abstract class com.example.tinyfarm.WildAnimal {
++ void eat()
+}
+
+abstract class com.example.tinyfarm.Animal {
++ {abstract}void eat()
+}
+
+class com.example.tinyfarm.Main {
++ {static} void main(String[])
+}
+
+class com.example.tinyfarm.Farm {
+~ List<FarmAnimal> animals
++ void add(FarmAnimal)
++ void feedAnimals()
+}
+
+
+class com.example.tinyfarm.Man {
++ Animal buyAnimal(double)
+}
+
+
+
+com.example.tinyfarm.WildAnimal <|-- com.example.tinyfarm.Tiger
+com.example.tinyfarm.Animal <|-- com.example.tinyfarm.FarmAnimal
+com.example.tinyfarm.FarmAnimal <|-- com.example.tinyfarm.Dog
+com.example.tinyfarm.FarmAnimal <|-- com.example.tinyfarm.Cat
+com.example.tinyfarm.Animal <|-- com.example.tinyfarm.WildAnimal
+java.lang.Object <|-- com.example.tinyfarm.Animal
+java.lang.Object <|-- com.example.tinyfarm.Farm
+@enduml
